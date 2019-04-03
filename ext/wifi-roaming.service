@@ -1,0 +1,11 @@
+[Unit]
+Description=Wifi Roaming Service
+Wants=networking.service
+After=networking.service
+
+[Service]
+Type=forking
+ExecStart=/usr/local/wifi-roaming/wifi-roaming.py
+
+[Install]
+WantedBy=multi-user.target
